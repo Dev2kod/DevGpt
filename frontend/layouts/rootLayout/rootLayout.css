@@ -1,0 +1,90 @@
+/* rootLayout.css */
+
+.rootLayout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  background-color: #1e293b; /* dark navy */
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.5rem;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.logo span {
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  color: whitesmoke; /* Tailwind's sky-400 */
+  transition: color 0.3s ease;
+}
+
+.logo:hover span {
+  color: #7dd3fc; /* lighter sky blue on hover */
+}
+
+/* USER SECTION */
+.user {
+  background-color: #334155;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user:hover {
+  background-color: #475569;
+}
+
+/* MAIN CONTENT */
+main {
+  flex: 1;
+  padding: 1.5rem;
+  max-width: 1200px;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 640px) {
+  header {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .logo span {
+    font-size: 1.1rem;
+  }
+
+  .user {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
