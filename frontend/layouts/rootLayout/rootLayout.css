@@ -12,10 +12,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 1.5rem;
-  background-color: #1e293b; /* dark navy */
+  padding: 16px 64px;
   color: white;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* LOGO */
@@ -46,24 +44,27 @@ header {
 
 /* USER SECTION */
 .user {
-  background-color: #334155;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
+  background-color: transparent;   /* no background */
+  border-radius: 8px;
   font-size: 0.95rem;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: box-shadow 0.3s ease, color 0.3s ease;
+  color: #e2e8f0; /* soft text color */
+  border: 1px solid #475569; /* faint outline (optional) */
+  box-shadow: 0 0 6px rgba(99, 102, 241, 0.6); /* initial glow */
 }
 
 .user:hover {
-  background-color: #475569;
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.9), 
+              0 0 24px rgba(99, 102, 241, 0.6);
+  color: #fff; /* brighten text on hover */
 }
 
 /* MAIN CONTENT */
 main {
   flex: 1;
-  padding: 1.5rem;
-  max-width: 1200px;
+  padding: 50px;
 }
 
 /* RESPONSIVENESS */

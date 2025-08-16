@@ -1,6 +1,7 @@
 import { Outlet, useNavigate } from "react-router-dom";
-import React from "react";
 import "./rootLayout.css";
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react';
+
 
 const Rootlayout = () => {
   const navigate = useNavigate();
@@ -12,7 +13,10 @@ const Rootlayout = () => {
           <img src="/logo.png" alt="Logo" />
           <span>DevGPT</span>
         </div>
-        <div className="user">User</div>
+        <div className="user">  
+      <SignedIn>
+        <UserButton />
+      </SignedIn></div>
       </header>
 
       <main>
