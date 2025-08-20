@@ -1,0 +1,154 @@
+.dashboard {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Form container */
+.formContainer {
+  margin-top: auto;
+  width: 50%;
+  background-color: #2c2937;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Input field */
+.input {
+  flex: 1;
+  padding: 20px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #ececec;
+  font-size: 15px;
+  border-radius: 12px;
+}
+
+.input:focus {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Button */
+.button {
+  background-color: #605e68;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effects */
+.button:hover {
+  background-color: #217bfe;
+  transform: scale(1.05);
+}
+
+/* Shimmer effect */
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  transform: skewX(-20deg);
+}
+
+.button:hover::before {
+  animation: shimmer 1s forwards;
+}
+
+@keyframes shimmer {
+  100% {
+    left: 125%;
+  }
+}
+
+/* Arrow inside button */
+.arrow {
+  width: 16px;
+  height: 16px;
+  filter: invert(1);
+}
+
+/* Texts section */
+.texts {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  gap: 50px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  opacity: 0.2;
+}
+
+.logo img {
+  width: 64px;
+  height: 64px;
+}
+
+.logo h1 {
+  font-size: 64px;
+  background: linear-gradient(to right, #217bfe, #e55571);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Options */
+.options {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.option {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-weight: 300;
+  font-size: 14px;
+  padding: 20px;
+  border: 1px solid #555;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.option:hover {
+  scale: 1.1;
+  transition: 0.2s ease-in-out;
+}
+
+.option img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}

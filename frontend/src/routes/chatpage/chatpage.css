@@ -1,0 +1,67 @@
+.chatpage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  background: linear-gradient(135deg, rgba(15, 15, 30, 0.9), rgba(30, 30, 60, 0.8));
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  overflow-y: auto; /* vertical scroll */
+  overflow-x: hidden;
+  padding: 20px;
+  scroll-behavior: smooth; /* makes scroll smooth */ 
+}
+
+/* Hide scrollbar */
+.wrapper::-webkit-scrollbar {
+  display: none;
+}
+.wrapper {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.chat {
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Glassmorphism card effect for messages */
+.messageUser,
+.messageAi {
+  padding: 12px 16px;
+  border-radius: 16px;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.15);
+  font-size: 15px;
+  line-height: 1.5;
+  word-break: break-word;
+  max-width: 70%;
+}
+
+/* Different styles for user and AI */
+.messageUser {
+  align-self: flex-end;
+  background-color: #111a;
+  border: 1px solid rgba(0, 150, 255, 0.3);
+}
+
+.messageAi {
+  align-self: flex-start;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
