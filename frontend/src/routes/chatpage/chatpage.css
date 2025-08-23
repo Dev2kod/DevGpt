@@ -8,6 +8,7 @@
   background: linear-gradient(135deg, rgba(15, 15, 30, 0.9), rgba(30, 30, 60, 0.8));
   color: #fff;
   font-family: Arial, sans-serif;
+  position: relative;
 }
 
 .wrapper {
@@ -18,6 +19,7 @@
 
   overflow-y: auto; /* vertical scroll */
   overflow-x: hidden;
+  
   padding: 20px;
   scroll-behavior: smooth; /* makes scroll smooth */ 
 }

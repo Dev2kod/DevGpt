@@ -41,7 +41,7 @@ const Chatlist = () => {
       <hr />
 
       <div className="upgrade" onClick={()=>{}}>
-        <img src="./logo.png" alt="Upgrade Logo" />
+        <img src="/logo.png" alt="Upgrade Logo" />
         <div className="texts">
           <span>Upgrade to Pro Version</span>
           <span>Unlock all features</span>

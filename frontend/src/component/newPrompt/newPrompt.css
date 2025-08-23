@@ -1,0 +1,62 @@
+.newPrompt {
+  width: 120%;
+  display: flex;
+  justify-content: center;
+  position: fixed; /* stays at bottom like ChatGPT */
+  bottom: 0;
+  left: 0;
+  padding: 16px;
+  background: transparent; /* clean background */
+}
+
+.newForm {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(44, 41, 55, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 10px 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Input box like ChatGPT */
+.newForm input[type="text"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 15px;
+  padding: 8px 4px;
+  font-family: inherit;
+}
+
+/* Attachment + Send button */
+.newForm button,
+.newForm label {
+  border-radius: 50%;
+  background-color: #3a3742;
+  border: none;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease-in-out, transform 0.1s;
+  cursor: pointer;
+}
+
+.newForm button:hover,
+.newForm label:hover {
+  background-color: #4a4752;
+  transform: scale(1.05);
+}
+
+.newForm img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1); /* makes icons white */
+}
+
